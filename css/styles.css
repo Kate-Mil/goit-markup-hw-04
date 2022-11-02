@@ -129,13 +129,44 @@ color: var(--activeSelection);
   gap: 50px;
 }
 
+.envelope::before{
+  display:inline-block;
+  content: '';
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  background-image: url(../images/SVG/envelope.svg);
+}
+
+.envelope::before:hover,
+.envelope::before:focus {
+  background-color: var(--activeSelection);
+}
+
+.telephone::before{
+  display:inline-block;
+  content: '';
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  background-image: url(../images/SVG/smartphone.svg);
+
+}
+
 /*----------------------HERO--------------------------*/
 
 .hero {
-  background: var(--backgroundFooter);
+  min-width: 1600px;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #C4C4C4;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background/hero-img.jpg);
 
 }
 
@@ -187,6 +218,33 @@ color: var(--activeSelection);
 .features {
   display: flex;
   gap: 30px;
+}
+
+.decor::before{
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+.antenna::before {
+  background-image: url(../images/SVG/antenna.svg);
+}
+
+.clock::before {
+  background-image: url(../images/SVG/clock.svg);
+}
+
+.diagram::before {
+  background-image: url(../images/SVG/diagram.svg);
+}
+
+.astronaut::before {
+  background-image: url(../images/SVG/astronaut.svg);
 }
 
 .features-title {
