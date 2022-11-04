@@ -327,6 +327,20 @@ background-color: #F5F4FA;
   line-height: calc(19/16);
 }
 
+/*------------------CLIENTS--------------------*/
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-list-link {
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+
+}
+
+
 /*-------------------FOOTER--------------------*/
 
 .footer {
@@ -371,6 +385,13 @@ color: var(--activeSelection);
 .footer-adress-links:not(:last-child) {
   margin-bottom:  9px;
 }
+
+.social-links {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
 
 
 /*---------------PORTFOLIO---------------------*/
