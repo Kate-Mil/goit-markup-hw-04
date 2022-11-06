@@ -24,6 +24,7 @@ img {
   --activeSelection: #2196F3;
   --addColor: #FFFFFF;
   --backgroundFooter: #2F303A;
+  --iconsColor: #AFB1B8;
 
 }
 
@@ -114,7 +115,9 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--colorOfParagraphs);
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -129,31 +132,10 @@ color: var(--activeSelection);
   gap: 50px;
 }
 
-.envelope::before{
-  display:inline-block;
-  content: '';
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-color: #FFFFFF;
-  background-image: url(../images/SVG/envelope.svg);
+ .contact-link-icon{
+  fill: currentColor;
 }
 
-.envelope::before:hover,
-.envelope::before:focus {
-  background-color: var(--activeSelection);
-}
-
-.telephone::before{
-  display:inline-block;
-  content: '';
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  background-color: #FFFFFF;
-  background-image: url(../images/SVG/smartphone.svg);
-
-}
 
 /*----------------------HERO--------------------------*/
 
@@ -220,32 +202,16 @@ color: var(--activeSelection);
   gap: 30px;
 }
 
-.decor::before{
-  content: '';
-  display: block;
+.decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   margin-bottom: 30px;
   background-color: #F5F4FA;
   border-radius: 4px;
-  background-position: center;
-  background-repeat: no-repeat;
-  }
+ }
 
-.antenna::before {
-  background-image: url(../images/SVG/antenna.svg);
-}
-
-.clock::before {
-  background-image: url(../images/SVG/clock.svg);
-}
-
-.diagram::before {
-  background-image: url(../images/SVG/diagram.svg);
-}
-
-.astronaut::before {
-  background-image: url(../images/SVG/astronaut.svg);
-}
 
 .features-title {
   font-size: 14px;
@@ -325,6 +291,7 @@ background-color: #F5F4FA;
   text-align: center;
   font-size: 16px;
   line-height: calc(19/16);
+  margin-bottom: 16px;
 }
 
 /*------------------CLIENTS--------------------*/
@@ -335,10 +302,26 @@ background-color: #F5F4FA;
 }
 
 .clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 172px;
+  height: 94px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
-
+  color: var(--iconsColor);
 }
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border: 1px solid var(--activeSelection);
+  color: var(--activeSelection);
+}
+
+.clients-list-icon {
+  fill: currentColor;
+}
+
 
 
 /*-------------------FOOTER--------------------*/
@@ -347,6 +330,12 @@ background-color: #F5F4FA;
   background-color: var(--backgroundFooter);
   padding-top: 60px;
   padding-bottom: 60px;
+ 
+}
+
+.footer .container {
+  display: flex;
+  gap: 70px;
 }
 
 .footer-adress {
@@ -386,14 +375,49 @@ color: var(--activeSelection);
   margin-bottom:  9px;
 }
 
-.social-links {
-  text-transform: uppercase;
-  color: #FFFFFF;
-  font-weight: 700;
+.social-links-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
 }
 
 
+.social-links-text {
+  text-transform: uppercase;
+  color: var(--addColor);
+  font-weight: 700;
+  margin-bottom: 20px;
+  
+}
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: var(--iconsColor);
+ }
+
+ 
+.social-links:hover,
+.social-links:focus {
+  background-color: var(--activeSelection);
+  color: var(--addColor);
+ }
+
+ .social-links-icon {
+  fill: currentColor;
+ }
+ 
+ .footer .social-links-icon {
+  fill: var(--addColor);
+ }
+ 
 /*---------------PORTFOLIO---------------------*/
 /*---------------FILTRES------------------------*/
 
@@ -467,12 +491,22 @@ color: var(--activeSelection);
 
 .project-container {
   padding: 20px 24px;
-  background: #FFFFFF;
+  background: var(--addColor);
   border: 1px solid #EEEEEE;
 
 }
 
-.projects > li {
-  width: 370px;
+.projects-card {
+  max-width: 370px;
+  max-height: 404px;
+  background-color: var(--addColor);
+  
+} 
+
+.projects-card:hover,
+.projects-card:focus {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 
