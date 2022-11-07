@@ -140,8 +140,9 @@ color: var(--activeSelection);
 /*----------------------HERO--------------------------*/
 
 .hero {
-  min-width: 1600px;
+  width: 1600px;
   min-height: 600px;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #C4C4C4;
@@ -336,6 +337,7 @@ background-color: #F5F4FA;
 .footer .container {
   display: flex;
   gap: 70px;
+  align-items: baseline;
 }
 
 .footer-adress {
@@ -497,6 +499,7 @@ color: var(--activeSelection);
 }
 
 .projects-card {
+  display: block;
   max-width: 370px;
   max-height: 404px;
   background-color: var(--addColor);
@@ -505,8 +508,7 @@ color: var(--activeSelection);
 
 .projects-card:hover,
 .projects-card:focus {
-  border: 1px solid #EEEEEE;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
 
